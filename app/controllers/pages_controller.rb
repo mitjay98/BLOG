@@ -1,5 +1,5 @@
 class PagesController < ApplicationController 
-    def index 
-        @name = params[:name]
+    def index
     end
+
 end
