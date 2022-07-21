@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :questions , only: %i[new index edit create update destroy show]
-  root "pages#index"
+  resources :questions do
+    resources :answers, only: %i[create destroy]
+  end
+  root 'pages#index'
 end
