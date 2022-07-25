@@ -1,3 +1,6 @@
-<h1> <%=@name%> Welcome to my blog </h1>
+<% currently_at 'Home' %>
+<% provide :page_title %>
 
-&copy; @mitjay98 <%=Time.now.year%>
+<h1>Welcome to AskIt!</h1>
+
+&copy; @mitjay98 <%= Time.now.year %>
