@@ -5,19 +5,18 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  def edit
 
-  end
+  def edit; end
+
   def update
     if @user.update user_params
-      flash[:success] = "your profile was successfully updated!"
+      flash[:success] = 'your profile was successfully updated!'
       redirect_to edit_user_path(@user)
     else
       render :edit
     end
-    end
-
   end
+
   def create
     @user = User.new user_params
     if @user.save
@@ -30,11 +29,12 @@ class UsersController < ApplicationController
   end
 
   private
+
   def set_user!
     @user = User.find params[:id]
   end
 
   def user_params
-    params.require(:user).permit(:email, :name, :password, :password_confirmation , :old_password)
+    params.require(:user).permit(:email, :name, :password, :password_confirmation, :old_password)
   end
 end

@@ -4,7 +4,6 @@ class UserDecorator < Draper::Decorator
   def name_or_email
     return name if name.present?
 
-    email.split("@")[0]
+    email.split('@')[0]
   end
-
 end
