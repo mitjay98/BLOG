@@ -20,6 +20,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'rubocop-rails', require: false
 gem 'faker', '~> 2'
 gem 'pagy', '~> 4.10'
+gem 'draper', '~> 4.0'
+gem 'valid_email2', '~> 4.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
