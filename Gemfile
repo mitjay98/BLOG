@@ -20,7 +20,6 @@ gem 'draper', '~> 4.0'
 gem 'faker', '~> 2'
 gem 'jbuilder', '~> 2.7'
 gem 'pagy', '~> 4.10'
-gem 'rubocop-rails', require: false
 gem 'valid_email2', '~> 4.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -46,6 +45,9 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'rubocop', '~> 1.18', require: false
+  gem 'rubocop-performance', '~> 1.11', require: false
+  gem 'rubocop-rails', '~> 2.11', require: false
   gem 'spring'
 end
 
