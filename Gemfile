@@ -16,10 +16,15 @@ gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'activerecord-import', '~> 1.2'
+gem 'caxlsx', '~> 3.1'
+gem 'caxlsx_rails', '~> 0.6'
 gem 'draper', '~> 4.0'
 gem 'faker', '~> 2'
 gem 'jbuilder', '~> 2.7'
 gem 'pagy', '~> 4.10'
+gem 'rubyXL', '~> 3.4'
+gem 'rubyzip', '~> 2'
 gem 'valid_email2', '~> 4.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -35,6 +40,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-rails'
 end
 
 group :development do
