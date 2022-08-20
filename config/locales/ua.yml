@@ -1,0 +1,56 @@
+ua:
+  en: Англійська
+  ua: Українська
+  pagy:
+    nav:
+      prev: Назад
+      next: Вперед
+  activerecord:
+    models:
+      question: Питання 
+    attributes:
+      question:
+        title: 'Заголовок'
+        body: 'Текст'
+  pages:
+    index:
+      title: 'Вітаємо в AskIt'
+  time:
+    am: ранку
+    formats:
+      default: "%a, %d %b %Y, %H:%M:%S %z"
+      long: "%d %B %Y, %H:%M"
+      short: "%d %b, %H:%M"
+    pm: вечора
+  menu:
+   home: 'Головне меню'
+   questions: Питання
+  date: 
+    month_names:
+    - 
+    - cічня
+    - лютого
+    - березня
+    - квітня
+    - травня
+    - червня
+    - липня
+    - серпня
+    - вересня
+    - жовтня
+    - листопада
+    - грудня
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      blank: не може бути пустим
+      too_short:
+        one:  недостатньої довжини (не може бути коротшим ніж %{count} символи)
+        few:  недостатньої довжини (не може бути коротшим ніж %{count} символи)
+        many:  недостатньої довжини (не може бути коротшим ніж %{count} символи)
+        other: недостатньої довжини (не може бути коротшим ніж %{count} символи)
+  questions:
+    destroy:
+      success: Ви видалили питання!!!
+
+ 

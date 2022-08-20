@@ -26,6 +26,7 @@ gem 'pagy', '~> 4.10'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
 gem 'valid_email2', '~> 4.0'
+gem 'rails-i18n', '~>6'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

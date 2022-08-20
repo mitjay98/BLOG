@@ -14,6 +14,7 @@ class Admin::UsersController < ApplicationController
   def create
     if params[:archive].present?
       UserBulkService.call params[:archive]
+      binding.pry
       flash[:success] = 'Users imported!'
     end
 
