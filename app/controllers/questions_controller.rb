@@ -2,12 +2,9 @@
 
 class QuestionsController < ApplicationController
   before_action :set_question!, only: %i[show destroy edit update]
-
+  include QuestionsAnswers
   def show
-    @question = @question.decorate
-    @answer = @question.answers.build
-    @pagy, @answers = pagy @question.answers.order(created_at: :desc)
-    @answers = @answers.decorate
+    load_question_answers
   end
 
   def destroy
@@ -37,7 +34,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new question_params
+    @question = current_user.questions.build  question_params
     if @question.save
       flash[:success] = 'Question created!'
       redirect_to questions_path
