@@ -13,4 +13,4 @@ class UserDecorator < ApplicationDecorator
     h.image_tag "https://www.gravatar.com/avatar/#{gravatar_hash}.jpg?s=#{size}",
                 class: "rounded #{css_class}", alt: name_or_email
   end
-end  
+end

@@ -16,4 +16,22 @@ en:
   questions:
     destroy:
       success: Question deleted!!!
+  global:
+    button:
+      delete: Delete
+      edit: Edit
+      show: Show
+      submit: Submit
+    dialog:
+      you_sure: Are you sure?
+    flash:
+      already_signed_in: You are already signed in!
+      not_signed_in: You are not signed in!
+    text:
+      omission: "... (continued)"
+  comments:
+    create:
+      success: comment created!!!
+    destroy:
+      success: comment deleted!!!
 

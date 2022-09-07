@@ -9,6 +9,8 @@ ua:
     models:
       question: Питання 
     attributes:
+      comment:
+        body: 'Текст'
       question:
         title: 'Заголовок'
         body: 'Текст'
@@ -52,5 +54,9 @@ ua:
   questions:
     destroy:
       success: Ви видалили питання!!!
+    show:
+      answers: Відповіді
+      write_answer: Напишіть свою відповідь
+      comments: Коментарі
 
  

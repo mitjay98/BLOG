@@ -1,4 +1,3 @@
-
 class CommentDecorator < ApplicationDecorator
   delegate_all
   decorates_association :user
@@ -8,4 +7,4 @@ class CommentDecorator < ApplicationDecorator
 
     commentable == self.commentable
   end
-end 
+end

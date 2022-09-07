@@ -1,28 +1,24 @@
-<% is_current_comment = comment&.for?(commentable) %>
+<%= tag.article class: 'mb-3 card border-0', id: dom_id(comment) do %>
+  <div class="row g-0">
+    <div class="col-sm-auto text-sm-center align-self-center">
+      <%= comment.user.gravatar size: 30, css_class: 'd-block' %>
+      <%= comment.user.name_or_email %>
+    </div>
+    <div class="col-sm">
+      <div class="card-body">
+        <section class="card-text mb-3">
+          <div class="col-sm-9">
+            <p>
+              <%= sanitize comment.body %>
+            </p>
 
-<%= link_to t('questions.show.comments'), "##{html_id}",
-            class: 'btn btn-primary', data: {'bs-toggle': 'collapse'} %>
-
-<%= tag.div class: "collapse #{'show' if is_current_comment}", id: html_id do %>
-  <%= form_with model: [commentable,
-                        (is_current_comment ? comment : commentable.comments.build)],
-                class: 'pt-3 border-top my-2' do |f| %>
-    <% if is_current_comment %>
-      <%= render 'shared/errors', object: comment %>
-    <% end %>
-
-    <div class="mb-3 row">
-      <div class="col-sm-2 col-form-label">
-        <%= f.label :body %>
-      </div>
-
-      <div class="col-sm-10">
-        <%= f.text_area :body, class: 'form-control form-control-sm' %>
+            <%= link_to t('global.button.delete'),
+              polymorphic_path([comment.commentable, comment]),
+              class: 'btn btn-danger btn-sm',
+              data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+          </div>
+        </section>
       </div>
     </div>
-
-    <%= f.submit t('global.button.submit'), class: 'btn btn-sm btn-primary' %>
-  <% end %>
-
-  <%= render commentable.comments.includes(:user).decorate %>
+  </div>
 <% end %>
