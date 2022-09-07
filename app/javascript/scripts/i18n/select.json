@@ -1,7 +1,7 @@
 {
-  "ru": {
-    "remove_button": "Удалить элемент",
-    "no_results": "Ничего не нашлось"
+  "ua": {
+    "remove_button": "видалити елемент",
+    "no_results": "Нічого не вдалось знайти"
   },
   "en": {
     "remove_button": "Remove element",

@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :set_question!, only: %i[show destroy edit update]
   include QuestionsAnswers
+  before_action :set_question!, only: %i[show destroy edit update]
+
   def show
     load_question_answers
   end
@@ -17,7 +18,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update question_params
-      flash[:success] = 'Question updated!'
+      flash[:success] = t('.success')
       redirect_to questions_path
     else
       render :edit
@@ -25,7 +26,8 @@ class QuestionsController < ApplicationController
   end
 
   def index
-    @pagy, @questions = pagy Question.includes(:user).order(created_at: :desc)
+    @tags = Tag.where(id: params[:tag_ids]) if params[:tag_ids]
+    @pagy, @questions = pagy Question.all_by_tags(@tags)
     @questions = @questions.decorate
   end
 
@@ -36,7 +38,7 @@ class QuestionsController < ApplicationController
   def create
     @question = current_user.questions.build question_params
     if @question.save
-      flash[:success] = 'Question created!'
+      flash[:success] = t('.success')
       redirect_to questions_path
     else
       render :new
@@ -46,7 +48,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:title, :body)
+    params.require(:question).permit(:title, :body, tag_ids: [])
   end
 
   def set_question!

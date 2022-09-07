@@ -39,6 +39,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@orchidjs/sifter@npm:^0.9.2":
+  version: 0.9.3
+  resolution: "@orchidjs/sifter@npm:0.9.3"
+  checksum: 7092f4d4bba115903b7ba91b98e2d56dc8ae50aa8fb1702e903bc220c3a7da236a20e2329b6ed223a4bc8870cc38635073d65706be80e0d66374a90c39b3874b
+  languageName: node
+  linkType: hard
+
 "@popperjs/core@npm:^2.11.6":
   version: 2.11.6
   resolution: "@popperjs/core@npm:2.11.6"
@@ -421,6 +428,8 @@ __metadata:
     bootstrap-icons: ^1.9.1
     esbuild: ^0.15.7
     sass: ^1.54.8
+    select: ^1.1.2
+    tom-select: ^2.1.0
     turbolinks: ^5.2.0
     webpack-dev-server: ^3
   languageName: unknown
@@ -3464,6 +3473,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"select@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "select@npm:1.1.2"
+  checksum: 4346151e94f226ea6131e44e68e6d837f3fdee64831b756dd657cc0b02f4cb5107f867cb34a1d1216ab7737d0bf0645d44546afb030bbd8d64e891f5e4c4814e
+  languageName: node
+  linkType: hard
+
 "selfsigned@npm:^1.10.8":
   version: 1.10.14
   resolution: "selfsigned@npm:1.10.14"
@@ -3963,6 +3979,15 @@ __metadata:
   version: 1.0.1
   resolution: "toidentifier@npm:1.0.1"
   checksum: 952c29e2a85d7123239b5cfdd889a0dde47ab0497f0913d70588f19c53f7e0b5327c95f4651e413c74b785147f9637b17410ac8c846d5d4a20a5a33eb6dc3a45
+  languageName: node
+  linkType: hard
+
+"tom-select@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "tom-select@npm:2.1.0"
+  dependencies:
+    "@orchidjs/sifter": ^0.9.2
+  checksum: f0516526e62b1742564c74603a753f45823fcc2e96c132b71ccf0712b62d629e385a4aa95d24c2cb4cc74dcb71bce8d70cf9289b1ca5c115d0c07f46c7f71188
   languageName: node
   linkType: hard
 

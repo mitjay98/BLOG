@@ -16,6 +16,8 @@ en:
   questions:
     destroy:
       success: Question deleted!!!
+    index:
+      search_by_tags: search by tags
   global:
     button:
       delete: Delete

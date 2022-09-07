@@ -10,6 +10,8 @@
     "bootstrap-icons": "^1.9.1",
     "esbuild": "^0.15.7",
     "sass": "^1.54.8",
+    "select": "^1.1.2",
+    "tom-select": "^2.1.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",

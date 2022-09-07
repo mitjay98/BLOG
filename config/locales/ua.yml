@@ -58,5 +58,7 @@ ua:
       answers: Відповіді
       write_answer: Напишіть свою відповідь
       comments: Коментарі
-
+  global:
+    button:
+      submit: вибрати
  
