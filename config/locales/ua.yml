@@ -61,4 +61,5 @@ ua:
   global:
     button:
       submit: вибрати
- 
+    flash: 
+      not_authorized: Ви не ввійшли в систему
