@@ -1,4 +1,3 @@
----
 en:
   activerecord:
     attributes:
@@ -24,6 +23,13 @@ en:
     models:
       question: Question
   admin:
+    user_mailer:
+      bulk_import_done:
+        subject: User import done | AskIt
+      bulk_import_fail:
+        subject: User import failed | AskIt
+      bulk_export_done:
+        subject: User export done | AskIt
     users:
       edit:
         title: Edit user
@@ -32,8 +38,9 @@ en:
       update:
         success: User updated!
       create:
-        success: Users imported!
+        success: You'll get an email once this operation is done
       index:
+        success: You'll get an email once this operation is done
         download_zipped: Download zipped XLSX
         title: Admin Users
         upload_form:
@@ -56,6 +63,8 @@ en:
       success: Answer updated!
   en: English
   global:
+    errors:
+      invalid_format: has invalid format
     user:
       roles:
         basic: Basic
@@ -104,7 +113,26 @@ en:
       comments: Comments
     update:
       success: Question updated!
-  ru: Russian
+  ua: Ukrainian
+  password_reset_mailer:
+    reset_email:
+      subject: 'Password reset | AskIt'
+  password_resets:
+    fail: Could not reset your password...
+    edit:
+      title: Enter new password
+      form:
+        submit: Reset my password!
+    update:
+      success: Your password was reset!
+    create:
+      success: Password reset instructions were sent to your email address.
+    new:
+      title: Reset password
+      form:
+        email: Email
+        submit: Send reset instructions
+        back: Back to sign in
   sessions:
     create:
       invalid_creds: Incorrect email and/or password!
@@ -117,6 +145,7 @@ en:
         password: Password
         remember_me: Remember me
         submit: Sign in!
+        forgot_password: I forgot my password
       title: Log In
   users:
     create:
