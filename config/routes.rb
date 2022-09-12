@@ -1,4 +1,16 @@
+require 'sidekiq/web'
+
+class AdminConstraint
+  def matches?(request)
+    user_id = request.session[:user_id] || request.cookie_jar.encrypted[:user_id]
+
+    User.find_by(id: user_id)&.admin_role?
+  end
+end
+
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq '
+
   namespace :api do
     resources :tags, only: :index
   end
