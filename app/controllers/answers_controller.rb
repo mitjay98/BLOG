@@ -55,7 +55,7 @@ class AnswersController < ApplicationController
     @answer = @question.answers.find params[:id]
   end
 
-  def authorize_question!
+  def authorize_answer!
     authorize(@answer || Answer)
   end
 end

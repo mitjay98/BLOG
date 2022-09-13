@@ -427,6 +427,7 @@ __metadata:
     bootstrap: ^5.2.0
     bootstrap-icons: ^1.9.1
     esbuild: ^0.15.7
+    jquery: ^3.6.1
     sass: ^1.54.8
     select: ^1.1.2
     tom-select: ^2.1.0
@@ -2346,6 +2347,13 @@ __metadata:
   version: 3.0.1
   resolution: "isobject@npm:3.0.1"
   checksum: db85c4c970ce30693676487cca0e61da2ca34e8d4967c2e1309143ff910c207133a969f9e4ddb2dc6aba670aabce4e0e307146c310350b298e74a31f7d464703
+  languageName: node
+  linkType: hard
+
+"jquery@npm:^3.6.1":
+  version: 3.6.1
+  resolution: "jquery@npm:3.6.1"
+  checksum: 6177d866a74f1137cad800f142c7cdbd5ab19cd4282546f8bdb4890c9f933b1d542ab96f2aa15d007e43c98de7315b0513e849ec5359d3ac5640f720892fe547
   languageName: node
   linkType: hard
 
