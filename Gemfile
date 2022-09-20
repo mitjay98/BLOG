@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'blueprinter'
 gem 'pundit'
 gem 'sidekiq'
+gem "factory_bot_rails"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -45,6 +46,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
+  end
 end
 
 group :development do
@@ -65,7 +69,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 3.26'
+  gem 'capybara'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
