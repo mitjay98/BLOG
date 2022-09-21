@@ -33,5 +33,7 @@ Rails.application.routes.draw do
     namespace :admin do
       resources :users, only: %i[index create edit update destroy]
     end
+
+    get 'auth/:provider/callback', to: 'sessions#omniauth'
   end
 end
