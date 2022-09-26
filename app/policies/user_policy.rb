@@ -14,4 +14,12 @@ class UserPolicy < ApplicationPolicy
   def destroy?
     false
   end
+
+  def oauth?
+    user.guest?
+  end
+
+  def oauth_user_registration?
+    user.guest?
+  end  
 end

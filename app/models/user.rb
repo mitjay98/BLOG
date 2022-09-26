@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :answers, dependent: :destroy
 
   validate :password_presence
-  validate :correct_old_password, on: :update, if: -> { password.present? && !admin_edit }
+  validate :correct_old_password, on: :update, if: -> { password.present? && !admin_edit && !uid.present?}
   validates :password, confirmation: true, allow_blank: true,
                        length: { minimum: 8, maximum: 70 }
 
