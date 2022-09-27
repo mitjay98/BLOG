@@ -67,8 +67,11 @@
 
             <li><%= nav_tab t('menu.log_in'), new_session_path,
               class: 'nav-link px-2', current_page: current_page %></li>
+
+        <%= button_to " Google ", '/auth/google_oauth2', class: "btn btn-outline-danger" %>
           <% end %>
         </ul>
+
       </nav>
     </div>
   </header>

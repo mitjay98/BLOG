@@ -1,24 +1,32 @@
-# README
+##Getting started 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*This is analog of stack overflow where you can ask question, give answers, comment both and some other interesting features. Also admin functionality, roles and authentication system are present here implemented by custom decisions and popular gems*
 
-Things you may want to cover:
+####For running this app on your pc locally you need: 
 
-* Ruby version
+> ruby 2.7.5 version
 
-* System dependencies
+> rails 6.1.4.4
 
-* Configuration
+> install yarn
 
-* Database creation
+> install PostgreSql 14.5
 
-* Database initialization
+####After installing all dependencies you need run following commands:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle install
+```
+```
+yarn build
+```
+```
+rails db:create 
+```
+```
+rails db:migrate
+```
+As we dont use webpacker here you need run this command for compiling all JS and CSS libraries
+```
+bin/dev
+````

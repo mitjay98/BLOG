@@ -18,7 +18,13 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
     resource :session, only: %i[new create destroy]
     resource :password_reset, only: %i[new create edit update]
-    resources :users, only: %i[new create edit update]
+    resources :users, only: %i[new create edit update ]
+    resources :users do
+      member do
+        get   :oauth
+        patch :oauth_user_registration
+      end
+    end
 
     resources :questions do
       resources :comments, only: %i[create destroy]
@@ -33,5 +39,7 @@ Rails.application.routes.draw do
     namespace :admin do
       resources :users, only: %i[index create edit update destroy]
     end
+
+    get 'auth/:provider/callback', to: 'sessions#omniauth'
   end
 end

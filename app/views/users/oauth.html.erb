@@ -1,9 +1,14 @@
-<%= render 'shared/errors', object: @user %>
+<% provide :page_title, 'Registration google user' %>
+<% currently_at 'Sign Up with google email' %>
 
-<%= form_with model: @user do |f| %>
+<h1 class="mb-4">Registration</h1>
+
+<%= render 'shared/errors', object: $ouath_user %>
+
+<%= form_for  $ouath_user, url: oauth_user_registration_user_url($ouath_user) do |f| %>
   <div class="mb-3 row">
     <div class="col-sm-2 col-form-label">
-      <%= f.label :email, t('users.new.form.email') %>
+      <%= f.label :email %>
     </div>
 
     <div class="col-sm-10">
@@ -13,7 +18,7 @@
 
   <div class="mb-3 row">
     <div class="col-sm-2 col-form-label">
-      <%= f.label :name, t('users.new.form.name') %>
+      <%= f.label :name %>
     </div>
 
     <div class="col-sm-10">
@@ -23,7 +28,7 @@
 
   <div class="mb-3 row">
     <div class="col-sm-2 col-form-label">
-      <%= f.label :password, t('users.new.form.password') %>
+      <%= f.label :password %>
     </div>
 
     <div class="col-sm-10">
@@ -33,7 +38,7 @@
 
   <div class="mb-3 row">
     <div class="col-sm-2 col-form-label">
-      <%= f.label :password_confirmation, t('users.new.form.password_confirmation')  %>
+      <%= f.label :password_confirmation %>
     </div>
 
     <div class="col-sm-10">
@@ -41,18 +46,7 @@
     </div>
   </div>
 
-  <% unless @user&.new_record? %>
-    <div class="mb-3 row">
-      <div class="col-sm-2 col-form-label">
-        <%= f.label :old_password, t('users.new.form.old_password') %>
-      </div>
-
-      <div class="col-sm-10">
-        <%= f.password_field :old_password, class: 'form-control form-control-lg' %>
-      </div>
-    </div>
-  <% end %>
-
-  <%= f.submit (@user&.new_record? ? "Register!" : "Save"),
+  <%= f.submit ("Register!"),
                class: 'btn btn-primary btn-lg' %>
+
 <% end %>

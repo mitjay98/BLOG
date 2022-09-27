@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :answers, dependent: :destroy
 
   validate :password_presence
-  validate :correct_old_password, on: :update, if: -> { password.present? && !admin_edit }
+  validate :correct_old_password, on: :update, if: -> { password.present? && !admin_edit && !uid.present?}
   validates :password, confirmation: true, allow_blank: true,
                        length: { minimum: 8, maximum: 70 }
 
@@ -19,7 +19,7 @@ class User < ApplicationRecord
   validate :password_complexity
   validates :role, presence: true
 
-  # before_save :set_gravatar_hash, if: :email_changed?
+  before_save :set_gravatar_hash, if: :email_changed?
 
   def author?(obj)
     obj.user == self
@@ -81,5 +81,19 @@ class User < ApplicationRecord
 
   def password_presence
     errors.add(:password, :blank) if password_digest.blank?
+  end
+
+  def self.from_omniauth(response)
+    user = User.find_by(uid: response[:uid])
+    if user.nil?
+      u = User.new
+      u.name = response[:info][:name]
+      u.email = response[:info][:email]
+      u.uid = response[:uid]
+      u.save(validate: false)
+      u
+    else
+      user
+    end
   end
 end

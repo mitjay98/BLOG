@@ -30,6 +30,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def oauth
+    flash.now[:warning] = 'This email is in a system but you dont have password, please complete registration'
+  end
+
+  def oauth_user_registration
+    $ouath_user.update user_params
+    if $ouath_user.valid?
+      sign_in $ouath_user
+      flash[:success] = 'your profile was successfully created!'
+      redirect_to root_path
+    else
+      redirect_to oauth_user_url($ouath_user)
+    end
+  end
+
   private
 
   def set_user!
@@ -43,4 +58,5 @@ class UsersController < ApplicationController
   def authorize_user!
     authorize(@user || User)
   end
+
 end
