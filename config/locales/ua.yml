@@ -27,6 +27,10 @@ ua:
   menu:
    home: 'Головне меню'
    questions: Питання
+   log_in: Вхід
+   log_out: Вихід
+   sign_up: Реєстрація
+   users: Користувачі
   date: 
     month_names:
     - 
@@ -58,8 +62,47 @@ ua:
       answers: Відповіді
       write_answer: Напишіть свою відповідь
       comments: Коментарі
+    index:
+      title: Питання
   global:
     button:
       submit: вибрати
     flash: 
       not_authorized: Ви не ввійшли в систему
+  sessions:
+    create:
+      invalid_creds: Невірна пошта або пароль
+      success: Ласкаво просимо, %{name}!
+    destroy:
+      success: Побачимось!
+    new:
+      form:
+        email: Email адреса
+        password: Пароль
+        remember_me: Запам'ятати
+        submit: Вхід!
+        forgot_password: Забув пароль(
+      title: Вхід
+  users:
+    create:
+      success: Ласкаво просимо, %{name}!
+    edit:
+      title: Редагувати профіль
+    global:
+      forms:
+        register: Зареєструватись
+        save: Зберегти
+    new:
+      title: Реєстрація
+      form:
+        email: Ваш Email
+        password: Пароль
+        name: Ім'я
+        password_confirmation: Підтвердження паролю
+        old_password: Старий пароль
+        remember_me: Запам'ятати
+        submit: Вхід!
+        forgot_password: Забув пароль(
+      page_title: Реєстрація
+    update:
+      success: Ваш профіль успішно оновлено

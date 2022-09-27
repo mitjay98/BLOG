@@ -157,6 +157,16 @@ en:
         register: Register
         save: Save
     new:
+      form:
+        email: Email
+        password: Password
+        name: Name
+        password_confirmation: Password confirmation
+        old_password: Old password
+        remember_me: Remember me
+        submit: Sign in!
+        forgot_password: I forgot my password
       title: Registration
+      page_title: Registration
     update:
       success: Your profile was successfully updated!
