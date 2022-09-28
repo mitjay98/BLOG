@@ -32,7 +32,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'blueprinter'
 gem 'pundit'
 gem 'sidekiq'
-gem "factory_bot_rails"
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -66,9 +68,6 @@ group :development do
   gem 'rubocop-performance', '~> 1.11', require: false
   gem 'rubocop-rails', '~> 2.11', require: false
   # gem 'spring'
-  gem 'omniauth'
-  gem 'omniauth-google-oauth2'
-  gem 'omniauth-rails_csrf_protection'
 end
 
 group :test do
@@ -77,6 +76,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem "factory_bot_rails"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
