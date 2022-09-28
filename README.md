@@ -1,6 +1,6 @@
 ## Getting started
 
-_This is analog of stack overflow where you can ask question, give answers, comment both and some other interesting features. Also admin functionality, roles and authentication system are present here implemented by custom decisions and popular gems_
+_This is analog of stack overflow where you can ask question, give answers, comment both and some other interesting features. Also admin functionality, roles and authentication system are present here implemented by custom decisions and popular gems._
 
 #### For running this app on your pc locally you need:
 
