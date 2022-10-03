@@ -69,6 +69,7 @@ group :development do
   gem 'rubocop-rails', '~> 2.11', require: false
   # gem 'spring'
   gem 'colorize'
+  gem "sidekiq-cron"
 end
 
 group :test do

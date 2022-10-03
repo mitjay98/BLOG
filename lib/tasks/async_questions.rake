@@ -1,5 +1,5 @@
 require '../BLOG/app/workers/questions_worker'
-namespace :questions dos
+namespace :questions do
     task :seed_by_sidekiq do
         QuestionsWorker.perform_async
     end
